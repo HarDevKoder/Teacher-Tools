@@ -34,6 +34,10 @@ body {
   font-weight: 600;
 }
 
+.txtDatos {
+  font-size: 1.2em;
+}
+
 .contenedorBotones {
   width: 100%;
   display: flex;
@@ -76,27 +80,26 @@ body {
   .contenedorGeneral {
     width: 90%;
     max-width: 90%;
-    margin: .8rem auto;
+    margin: 0.8rem auto;
   }
 
-  .txtDatos{
+  .txtDatos {
     width: 100%;
-    
+    font-size: 1.1em;
   }
 
   .boton {
-  height: 2rem;
-  padding: 0 1.2rem;
-  border: 1px solid black;
-  color: black;
-  font-size: 1.1em;
-}
+    height: 2rem;
+    padding: 0 1.2rem;
+    border: 1px solid black;
+    color: black;
+    font-size: 1.1em;
+  }
 
-.toastCopiar {
-  top: -2rem;
-  left: 13.5rem;
-}
-
+  .toastCopiar {
+    top: -2rem;
+    left: 13.5rem;
+  }
 }
 
 /* Celulares Landscape */
