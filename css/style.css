@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "miFuente";
+  src: url("../fonts/openSans.ttf");
+}
+
+html {
+  font-family: miFuente;
+  font-size: 100%;
+}
+
+body {
+  background-color: cornsilk;
+}
+
+.contenedorGeneral {
+  border: 1px solid gray;
+  width: fit-content;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.2rem;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3), 3px 0px 3px rgba(0, 0, 0, 0.3);
+}
+
+.tituloGeneraLista {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.contenedorBotones {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 0.2rem;
+  position: relative;
+}
+
+.boton {
+  height: 1.5rem;
+  padding: 0 0.5rem;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.toastCopiar {
+  background: rgba(0, 0, 0, 0.5);
+  color: azure;
+  padding: 0.2rem;
+  border-radius: 0.2rem;
+  position: absolute;
+  top: -2rem;
+  left: 9.6rem;
+}
+
+/* ESTILOS RESPONSIVOS */
+/* DESKTOP FIRST */
+
+/* Laptops */
+@media (max-width: 992px) {
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+  .contenedorGeneral {
+    width: 90%;
+    max-width: 90%;
+    margin: .8rem auto;
+  }
+
+  .txtDatos{
+    width: 100%;
+    
+  }
+
+  .boton {
+  height: 2rem;
+  padding: 0 1.2rem;
+  border: 1px solid black;
+  color: black;
+  font-size: 1.1em;
+}
+
+.toastCopiar {
+  top: -2rem;
+  left: 13.5rem;
+}
+
+}
+
+/* Celulares Landscape */
+@media only screen and (orientation: landscape) {
+}
