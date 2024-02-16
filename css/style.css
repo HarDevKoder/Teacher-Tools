@@ -36,6 +36,7 @@ body {
 
 .txtDatos {
   font-size: 1.2em;
+  padding: 0.5rem;
 }
 
 .contenedorBotones {
@@ -61,7 +62,7 @@ body {
   border-radius: 0.2rem;
   position: absolute;
   top: -2rem;
-  left: 9.6rem;
+  left: 11.7rem;
 }
 
 /* ESTILOS RESPONSIVOS */
