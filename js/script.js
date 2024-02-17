@@ -10,7 +10,7 @@ import {
 // PROGRAMA PRINCIPAL
 
 // Verifico conexion ServiceWorker
-verificarServiceWorker
+verificarServiceWorker();
 
 // referencio Eementos del DOM
 referenciasDom();
