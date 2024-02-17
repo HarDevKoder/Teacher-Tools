@@ -1,3 +1,17 @@
+// -----------------------------------------------------------------------
+// LIBRERIA DE FUNCIONES A UTILIZAR EN EL PROYECTO
+// -----------------------------------------------------------------------
+// Comprobación e Compatibilidad con service Worker (PWA)
+// -----------------------------------------------------------------------
+export const verificarServiceWorker = () => {
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker
+      .register("./sw.js")
+      .then((reg) => console.log("Registro de SW exitoso", reg))
+      .catch((err) => console.warn("Error al tratar de registrar el sw", err));
+  }
+};
+
 // Referencias a los elementos del DOM
 export const referenciasDom = () => {
   return {
@@ -5,7 +19,7 @@ export const referenciasDom = () => {
     btnOrdenar: document.querySelector("#btnOrdenar"),
     btnCopiar: document.querySelector("#btnCopiar"),
     btnBorrar: document.querySelector("#btnBorrar"),
-    toastCopiar: document.querySelector("#toastCopiar")
+    toastCopiar: document.querySelector("#toastCopiar"),
   };
 };
 

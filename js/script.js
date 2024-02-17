@@ -1,12 +1,16 @@
 // Importo referencias del DOM
-import { 
-  referenciasDom, 
-  ordenarDatos, 
-  borrardatos, 
-  copiarAlPortapapeles } 
-from "./funciones.js";
+import {
+  referenciasDom,
+  ordenarDatos,
+  borrardatos,
+  copiarAlPortapapeles,
+  verificarServiceWorker
+} from "./funciones.js";
 
 // PROGRAMA PRINCIPAL
+
+// Verifico conexion ServiceWorker
+verificarServiceWorker
 
 // referencio Eementos del DOM
 referenciasDom();
