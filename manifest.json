@@ -1,0 +1,19 @@
+{
+  "name": "Teacher tools",
+  "short_name": "TeachTools",
+  "description": "Bienvenid@s a Teacher Tools, tu asisente para gestionar clases",
+  "background_color": "#e0e8f8",
+  "theme_color": "#193257",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": "./?utm_source=web_app_manifest",
+  "scope": "./",
+  "lang": "es-MX",
+  "icons": [
+    {
+      "src": "./imagenes/MaestroMobile.png",
+      "sizes": "386x288",
+      "type": "image/png"
+    }
+  ]
+}
