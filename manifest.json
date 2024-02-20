@@ -1,7 +1,7 @@
 {
-  "name": "Teacher Tools",
-  "short_name": "TeachTools",
-  "description": "Bienvenid@s a Teacher Tools, tu asisente para gestionar clases",
+  "name": "List Gen",
+  "short_name": "List Gen",
+  "description": "Bienvenid@s a List Gen, tu generador de listas personalizado",
   "background_color": "#e0e8f8",
   "theme_color": "#193257",
   "orientation": "portrait",
@@ -11,8 +11,8 @@
   "lang": "es-MX",
   "icons": [
     {
-      "src": "./imagenes/MaestroMobile.png",
-      "sizes": "386x288",
+      "src": "./imagenes/listado1280.png",
+      "sizes": "1280x1280",
       "type": "image/png"
     }
   ]

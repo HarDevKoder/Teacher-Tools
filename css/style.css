@@ -15,18 +15,20 @@ html {
 }
 
 body {
-  background-color: cornsilk;
+  background-color: #ffccff;
 }
 
 .contenedorGeneral {
-  border: 1px solid gray;
+  background: rgb(215, 230, 86);
+  border: .1rem solid gray;
   width: fit-content;
-  margin: 10px;
+  margin: 20px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 1.2rem;
   box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3), 3px 0px 3px rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
 }
 
 .tituloGeneraLista {
@@ -53,6 +55,8 @@ body {
   display: grid;
   place-items: center;
   cursor: pointer;
+  border: 1px solid black;
+  border-radius: 0.5rem;
 }
 
 .toastCopiar {
@@ -68,15 +72,15 @@ body {
 /* ESTILOS RESPONSIVOS */
 /* DESKTOP FIRST */
 
-/* Laptops */
+/* LAPTOPS */
 @media (max-width: 992px) {
 }
 
-/* Tablets */
+/* TABLETS */
 @media (max-width: 768px) {
 }
 
-/* Celulares */
+/* CELULARES */
 @media (max-width: 600px) {
   .contenedorGeneral {
     width: 90%;
@@ -105,4 +109,29 @@ body {
 
 /* Celulares Landscape */
 @media only screen and (orientation: landscape) {
+  .contenedorGeneral {
+    background: rgb(215, 230, 86);
+    border: 1px solid gray;
+    width: fit-content;
+    height: 20rem;
+    margin: .5rem auto;
+  }
+
+  .txtDatos {
+    width: 100%;
+    font-size: 1.1em;
+  }
+
+  .boton {
+    height: 2rem;
+    padding: 0 1.2rem;
+    border: 1px solid black;
+    color: black;
+    font-size: 1.1em;
+  }
+
+  .toastCopiar {
+    top: -2rem;
+    left: 14.6rem;
+  }
 }

@@ -23,6 +23,30 @@ export const referenciasDom = () => {
   };
 };
 
+// Función que Limpia texto ingresado y lo convierte a minusculas
+
+const mayusculaInicialTexto = (texto) => {
+  let cadenaFinal = " ",
+    textoLimpioMinusculas,
+    arrayTexto,
+    letraInicial;
+
+  textoLimpioMinusculas = texto
+    .trim()
+    .replace(/^[^a-zA-Z]*/, "")
+    .toLowerCase();
+  arrayTexto = textoLimpioMinusculas.split(" ");
+  arrayTexto.forEach((palabra) => {
+    palabra = palabra.split("");
+    letraInicial = palabra.shift();
+    palabra.unshift(letraInicial.toUpperCase());
+    palabra = palabra.join("");
+    cadenaFinal += palabra + " ";
+  });
+
+  return cadenaFinal.trim();
+};
+
 // Función que Ordena los datos
 export const ordenarDatos = () => {
   let datos = txtDatos.value.trim();

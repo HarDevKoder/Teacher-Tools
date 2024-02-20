@@ -1,13 +1,13 @@
 //asignar un nombre y versión al cache
-const CACHE_NAME = "v1_cache_TeachTools",
+const CACHE_NAME = "Caché_List_Gen",
   urlsToCache = [
     "./",
     "index.html",
     "css/style.css",
     "fonts/openSans.ttf",
     "imagenes/favicon.png",
-    "imagenes/MaestroDesktop.png",
-    "imagenes/MaestroMobile.png",
+    "imagenes/listado1239.png",
+    "imagenes/listado1280.png",
     "js/funciones.js",
     "js/script.js",
     "manifest.json",
