@@ -4,11 +4,10 @@ import {
   ordenarDatos,
   borrardatos,
   copiarAlPortapapeles,
-  verificarServiceWorker
+  verificarServiceWorker,
 } from "./funciones.js";
 
 // PROGRAMA PRINCIPAL
-
 // Verifico conexion ServiceWorker
 verificarServiceWorker();
 

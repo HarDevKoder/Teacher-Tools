@@ -1,7 +1,7 @@
 // -----------------------------------------------------------------------
 // LIBRERIA DE FUNCIONES A UTILIZAR EN EL PROYECTO
 // -----------------------------------------------------------------------
-// Comprobación e Compatibilidad con service Worker (PWA)
+// Comprobación de Compatibilidad con service Worker (PWA)
 // -----------------------------------------------------------------------
 export const verificarServiceWorker = () => {
   if ("serviceWorker" in navigator) {
@@ -12,7 +12,9 @@ export const verificarServiceWorker = () => {
   }
 };
 
+// -----------------------------------------------------------------------
 // Referencias a los elementos del DOM
+// -----------------------------------------------------------------------
 export const referenciasDom = () => {
   return {
     txtDatos: document.querySelector("#txtDatos"),
@@ -23,8 +25,9 @@ export const referenciasDom = () => {
   };
 };
 
+// -----------------------------------------------------------------------
 // Función que Limpia texto ingresado y lo convierte a minusculas
-
+// -----------------------------------------------------------------------
 const mayusculaInicialTexto = (texto) => {
   let cadenaFinal = " ",
     textoLimpioMinusculas,
@@ -47,10 +50,12 @@ const mayusculaInicialTexto = (texto) => {
   return cadenaFinal.trim();
 };
 
+// -----------------------------------------------------------------------
 // Función que Ordena los datos
-export const ordenarDatos = () => {
+// -----------------------------------------------------------------------
+export const ordenarDatos = async() => {
   let datos = txtDatos.value.trim();
-  var respuesta = confirm("¿Deseas agregar numeros a la lista");
+  var respuesta = await mensajeConfirmacionSweetAlert();
   let mensaje = "";
   datos = datos.split("\n").sort();
   datos.forEach((linea, indice) => {
@@ -69,7 +74,9 @@ export const borrardatos = () => {
   txtDatos.value = "";
 };
 
+// -----------------------------------------------------------------------
 // Función que copia contenido del textArea al portapapeles
+// -----------------------------------------------------------------------
 export const copiarAlPortapapeles = () => {
   toastCopiar.style.display = "block";
   navigator.clipboard
@@ -86,3 +93,119 @@ export const copiarAlPortapapeles = () => {
   }, 1000);
   borrardatos();
 };
+
+// -----------------------------------------------------------------------
+// Mensaje sweet alert para confimación de agregar o no numeros a la lista
+// -----------------------------------------------------------------------
+export const mensajeConfirmacionSweetAlert = () => {
+  return new Promise((resolve, reject) => {
+    Swal.fire({
+      title: "Se va a generar la lista ordenada...",
+      text: "Deseas agregar numeración?",
+      background: "floralwhite",
+      icon: "info",
+      iconColor: "#3085d6",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Si",
+      cancelButtonText: "No",
+      customClass: {
+        confirmButton: "btn-size",
+        cancelButton: "btn-size",
+        popup: "alert-size",
+        title: "title-style",
+      },
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          title: "Proceso exitoso!",
+          text: "La lista ha sido generada",
+          background: "floralwhite",
+          icon: "success",
+          iconColor: "#7FFF00",
+          timer: 2000,
+          showConfirmButton: false,
+          customClass: {
+            popup: "alert-size",
+            title: "title-style",
+          },
+        });
+        resolve(true);
+      } else {
+        Swal.fire({
+          title: "Proceso exitoso!",
+          text: "La lista ha sido generada",
+          background: "floralwhite",
+          icon: "success",
+          iconColor: "#7FFF00",
+          timer: 2000,
+          showConfirmButton: false,
+          customClass: {
+            popup: "alert-size",
+            title: "title-style",
+          },
+        });
+        resolve(false);
+      }
+    });
+  });
+};
+
+
+
+
+
+
+// export const mensajeConfirmacionSweetAlert = () => {
+//   Swal.fire({
+//     title: "Se va a generar la lista ordenada...",
+//     text: "Deseas agregar numeración?",
+//     background: "floralwhite",
+//     icon: "info",
+//     iconColor: "#3085d6",
+//     showCancelButton: true,
+//     confirmButtonColor: "#3085d6",
+//     cancelButtonColor: "#d33",
+//     confirmButtonText: "Si",
+//     cancelButtonText: "No",
+//     customClass: {
+//       confirmButton: "btn-size",
+//       cancelButton: "btn-size",
+//       popup: "alert-size",
+//       title: "title-style",
+//     },
+//   }).then((result) => {
+//     if (result.isConfirmed) {
+//       Swal.fire({
+//         title: "Proceso exitoso!",
+//         text: "La lista ha sido generada",
+//         background: "floralwhite",
+//         icon: "success",
+//         iconColor: "#7FFF00",
+//         timer: 2000,
+//         showConfirmButton: false,
+//         customClass: {
+//           popup: "alert-size",
+//           title: "title-style",
+//         },
+//       });
+//       return true;
+//     } else {
+//       Swal.fire({
+//         title: "Proceso exitoso!",
+//         text: "La lista ha sido generada",
+//         background: "floralwhite",
+//         icon: "success",
+//         iconColor: "#7FFF00",
+//         timer: 2000,
+//         showConfirmButton: false,
+//         customClass: {
+//           popup: "alert-size",
+//           title: "title-style",
+//         },
+//       });
+//     }
+//     return false;
+//   });
+// };

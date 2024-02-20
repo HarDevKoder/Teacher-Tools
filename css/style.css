@@ -20,7 +20,7 @@ body {
 
 .contenedorGeneral {
   background: rgb(215, 230, 86);
-  border: .1rem solid gray;
+  border: 0.1rem solid gray;
   width: fit-content;
   margin: 20px auto;
   display: flex;
@@ -69,6 +69,19 @@ body {
   left: 11.7rem;
 }
 
+/* Clases para sweet alert */
+.btn-size {
+  width: 5rem;
+}
+
+.alert-size {
+  width: 25%;
+}
+
+.title-style {
+  font-size: 1em;
+}
+
 /* ESTILOS RESPONSIVOS */
 /* DESKTOP FIRST */
 
@@ -105,6 +118,15 @@ body {
     top: -2rem;
     left: 13.5rem;
   }
+
+  /* Estilos para los sweet Alerts */
+  .alert-size {
+    width: 90%;
+  }
+
+  .title-style {
+    font-size: 1.2em;
+  }
 }
 
 /* Celulares Landscape */
@@ -114,7 +136,7 @@ body {
     border: 1px solid gray;
     width: fit-content;
     height: 20rem;
-    margin: .5rem auto;
+    margin: 0.5rem auto;
   }
 
   .txtDatos {
