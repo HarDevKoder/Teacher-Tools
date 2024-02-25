@@ -63,6 +63,7 @@ const mayusculaInicialTexto = (texto) => {
 export const ordenarDatos = async () => {
   let datos = txtDatos.value;
   let datosLimpios = mayusculaInicialTexto(datos);
+  // Capturo valor retornado desde el sweet alert
   var respuesta = await mensajeConfirmacionSweetAlert();
   let mensaje = "";
   datosLimpios = datosLimpios.split("\n").sort();
@@ -108,6 +109,7 @@ export const copiarAlPortapapeles = () => {
 // -----------------------------------------------------------------------
 export const mensajeConfirmacionSweetAlert = () => {
   return new Promise((resolve, reject) => {
+    // Confifuración general del mensaje
     Swal.fire({
       title: "Se va a generar la lista ordenada...",
       text: "Deseas agregar numeración?",
@@ -119,12 +121,14 @@ export const mensajeConfirmacionSweetAlert = () => {
       cancelButtonColor: "#d33",
       confirmButtonText: "Si",
       cancelButtonText: "No",
+      // Clases para manipular estilos CSS
       customClass: {
         confirmButton: "btn-size",
         cancelButton: "btn-size",
         popup: "alert-size",
         title: "title-style",
       },
+      // Respuesta afirmativa (si)
     }).then((result) => {
       if (result.isConfirmed) {
         Swal.fire({
@@ -140,7 +144,9 @@ export const mensajeConfirmacionSweetAlert = () => {
             title: "title-style",
           },
         });
+        // Si se presiona si, retorna true
         resolve(true);
+        // Respuesta negativa (no)
       } else {
         Swal.fire({
           title: "Proceso exitoso!",
@@ -155,6 +161,7 @@ export const mensajeConfirmacionSweetAlert = () => {
             title: "title-style",
           },
         });
+        // Si se presiona no, retorna false
         resolve(false);
       }
     });
